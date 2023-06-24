@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server",
-    "start": "node webCam.js"
+    "start": "node webCam.mjs"
   },
   "author": "",
   "license": "ISC",
