@@ -1,13 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import 'dotenv/config'
-// dotenv.config()
+import 'dotenv/config';
+
 
 const PORT = process.env.PORT || 5000;
 
 
-mongoose.connect(`mongodb+srv://mdnaziya2833:${process.env.API_KEY}@cluster0.7vojiuz.mongodb.net/webCameraDataBase?retryWrites=true&w=majority`)
+mongoose.connect('mongodb+srv://mdnaziya2833:9PhaPFnnTwFWfzMx@cluster0.7vojiuz.mongodb.net/webCameraDataBase?retryWrites=true&w=majority')
 
 const app = express();
 
@@ -33,7 +33,7 @@ const finalmodel = mongoose.model('finaldb', finalItemsSchema)
 
 app.get('/', function (req, res) {
 
-    webCamModel.find({}).then(data => {
+    webCamModel.find({}).maxTimeMS(30000).then(data => {
         data.map(obj => {
 
             const NameList = obj.ApplicantName;
