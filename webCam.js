@@ -1,11 +1,13 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import dotenv from 'dotenv';
-dotenv.config()
-const PORT = process.env.PORT || 5000;
+import 'dotenv/config'
+// dotenv.config()
+const port = 'PORT';
+const PORT = process.env[port] || process.env.PORT_ID;
 
-mongoose.connect(`mongodb+srv://mdnaziya2833:QnurlnIRkIoWwqLV@cluster0.7vojiuz.mongodb.net/webCameraDataBase?retryWrites=true&w=majority`)
+
+mongoose.connect(`mongodb+srv://mdnaziya2833:${process.env.API_KEY}@cluster0.7vojiuz.mongodb.net/webCameraDataBase?retryWrites=true&w=majority`)
 
 const app = express();
 
