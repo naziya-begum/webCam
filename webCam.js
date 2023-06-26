@@ -1,7 +1,19 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import 'dotenv/config';
+const express = require('express')
+
+const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+bodyParser.urlencoded({ extended: false });
+const cors = require('cors');
+require('dotenv').config()
+
+
+
+
+
+
+
+
+
 
 
 const PORT = process.env.PORT || 5000;
@@ -12,7 +24,8 @@ mongoose.connect('mongodb+srv://mdnaziya2833:webCameraDatabaseProject@cluster0.7
 const app = express();
 
 app.use(bodyParser.json({ limit: '10mb' }));
-import cors from 'cors';
+
+
 app.use(cors())
 const WebCamSchema = mongoose.Schema({
     ID: String,

@@ -2,12 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "webCam.mjs",
-  "type": "module",
+  "main": "webCam.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server",
-    "start": "node webCam.mjs"
+    "start": "node webCam.js"
   },
   "author": "",
   "license": "ISC",
