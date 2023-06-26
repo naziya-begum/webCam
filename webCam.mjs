@@ -7,7 +7,7 @@ import 'dotenv/config';
 const PORT = process.env.PORT || 5000;
 
 
-mongoose.connect('mongodb+srv://mdnaziya2833:9PhaPFnnTwFWfzMx@cluster0.7vojiuz.mongodb.net/webCameraDataBase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://mdnaziya2833:webCameraDatabaseProject@cluster0.7vojiuz.mongodb.net/webCameraData?retryWrites=true&w=majority')
 
 const app = express();
 
